@@ -15,8 +15,6 @@
         </p>
         <ul>
             <li v-for="i in order"
-                v-bind:key="i.id"
-                v-bind:class="{ tuyoi: i.hp > 300 }">
                 {{ i.name }} {{ i.N }} {{ i.S }} {{ i.O }} {{ i.A }}
             </li>
         </ul>
