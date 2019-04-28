@@ -1,6 +1,6 @@
 <template>
     <button type="button" v-on:click='tell()'>
-        <span style="font-size: large; color: #333399; ">{{menu}}を購入する</span>
+        <span style="font-size: large; color: #333399; ">{{menu}}</span>
     </button>
 </template>
 
