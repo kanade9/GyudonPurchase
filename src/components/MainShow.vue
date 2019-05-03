@@ -49,7 +49,7 @@
                         <app-menu-button menu="スープ" N=3 S=1 O=0 A=200 @tellValue="addList"></app-menu-button>
                     </p>
                 </v-flex>
-                <v-flex xd3>
+                <v-flex xs3>
                     <h3>オプション</h3>
                     <p>
                         <app-menu-button menu="並" N=4 S=0 O=1 A=0 @tellValue="addList"></app-menu-button>
@@ -69,17 +69,29 @@
                 </v-flex>
             </v-layout>
         </v-container>
-        <ul>
-            <li v-for="i in order"
-                v-bind:key="i.id"
-                v-bind:class="{highValue: i.N > 500 }">
-                {{ i.name }} {{ i.N }} {{ i.S }} {{ i.O }} {{ i.A }}
-            </li>
-        </ul>
-        <p>
-            <button v-on:click="judge()">値段を計算する</button>
-        </p>
-        <h1>合計 {{totalvalue}}円</h1>
+
+        <v-container grid-list-md text-xs-center>
+            <v-layout row reverse wrap >
+                <!--<v-layout justify-center>-->
+                <v-flex xs6 sm3>
+                    <p>
+                        <v-btn color="success" v-on:click="judge()">値段を計算する</v-btn>
+                    </p>
+                    <h1>小計 {{total_value}}円</h1>
+                    <h1>割引額{{discount}}円</h1>
+                    <h1>合計{{sum_value}}円</h1>
+                </v-flex>
+                <v-flex xs6 sm3>
+                    <div v-for="i in order"
+                         v-bind:key="i.id"
+                         v-bind:class="{highValue: i.N > 500 }">
+                        <h3>{{ i.name }}</h3>
+                        <!--{{ i.N }} {{ i.S }} {{ i.O }} {{ i.A }}-->
+                    </div>
+                </v-flex>
+
+            </v-layout>
+        </v-container>
     </div>
 </template>
 
@@ -111,9 +123,11 @@
         components: {AppMenuButton},
         data: function () {
             return {
-                totalvalue: 0,
+                total_value: 0,
+                discount: 0,
+                sum_value: 0,
                 order: [
-                    {name: 'menu', N: 0, S: 0, O: 0, A: 0}]
+                    {name: '購入リスト', N: 0, S: 0, O: 0, A: 0}]
             }
         },
         methods: {
@@ -128,21 +142,29 @@
                 let order_count = this.order.length - 1;
                 let status = 0;
                 let amount = 0;
-                let discount = 0;
                 let accepted = false;
                 let event_code = 0;
                 let event_index = 0;
 
                 for (let i = 1; i <= order_count; i++) {
                     amount += parseInt(this.order[i].A);
-                    this.totalvalue = amount;
 
                     event_code = parseInt(this.order[i].N) * 100 + parseInt(this.order[i].S) * 10 + parseInt(this.order[i].O);
                     event_index = get_event_index(event_code);
                     // alert(event_index);
 
+                    // 割引額の設定
+                    if (status === 4 && event_index === 6) {
+                        this.discount += 50;
+                    }
+
                     status = status_table[status][event_index];
-                    alert(status);
+
+                    this.total_value = amount;
+
+                    this.sum_value = this.total_value - this.discount;
+
+                    // alert(status);
                     if (status === -1) {
                         alert('error! please retry');
                     }
