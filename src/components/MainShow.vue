@@ -164,7 +164,7 @@
 
                     this.sum_value = this.total_value - this.discount;
 
-                    alert(status);
+                    // alert(status);
                     if (status === -1) {
                         alert('error! please retry');
                         location.reload();
