@@ -1,10 +1,10 @@
 <template>
     <div>
-        <p>
-            This is MainShow
-        </p>
-        <h4>This page will be a top page</h4>
-        <br>
+        <!--<p>-->
+        <!--This is MainShow-->
+        <!--</p>-->
+        <!--<h4>This page will be a top page</h4>-->
+        <!--<br>-->
         <v-container grid-list-md text-xs-center>
             <v-layout justify-center>
                 <v-flex xs3>
@@ -28,7 +28,7 @@
                         <app-menu-button menu="ポテトサラダ" N=2 S=1 O=2 A=130 @tellValue="addList"></app-menu-button>
                     </p>
                     <p>
-                        <app-menu-button menu="漬物" N=2 S=1 O=2 A=100 @tellValue="addList"></app-menu-button>
+                        <app-menu-button menu="漬物" N=2 S=1 O=0 A=100 @tellValue="addList"></app-menu-button>
                     </p>
                     <p>
                         <app-menu-button menu="生卵" N=2 S=0 O=0 A=60 @tellValue="addList"></app-menu-button>
@@ -71,7 +71,7 @@
         </v-container>
 
         <v-container grid-list-md text-xs-center>
-            <v-layout row reverse wrap >
+            <v-layout row reverse wrap>
                 <!--<v-layout justify-center>-->
                 <v-flex xs6 sm3>
                     <p>
@@ -164,12 +164,17 @@
 
                     this.sum_value = this.total_value - this.discount;
 
-                    // alert(status);
+                    alert(status);
                     if (status === -1) {
                         alert('error! please retry');
+                        location.reload();
                     }
                 }
-                accepted = acception[status];
+                if (status === -1) {
+                    accepted = false;
+                } else {
+                    accepted = acception[status];
+                }
 
                 if (accepted) {
                     alert('購入可')

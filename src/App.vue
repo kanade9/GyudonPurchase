@@ -2,8 +2,8 @@
     <v-app>
         <v-toolbar app>
             <v-toolbar-title class="headline text-uppercase">
-                <span>Vuetify</span>
-                <span class="font-weight-light">MATERIAL DESIGN</span>
+                <span>GYUDON</span>
+                <span class="font-weight-light">PURCHASE</span>
             </v-toolbar-title>
             <v-spacer></v-spacer>
             <v-btn
@@ -14,7 +14,7 @@
                 <span class="mr-2">Latest Release</span>
             </v-btn>
         </v-toolbar>
-
+<!---->
         <v-content>
             <MainShow/>
         </v-content>
