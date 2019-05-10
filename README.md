@@ -1,5 +1,4 @@
 # gyudonpurchase
-![](https://github.com/kzmaro/GyudonPurchase/blob/pic/menu.png)
 H31春（卍平成最後卍）応用情報技術者試験の午後問3の券売機を実際に再現するプロジェクト
 [こちら](https://kzmaro.github.io/GyudonPurchase/)
 ### あ〜ー〜ー受かっててくれ〜〜〜〜〜〜〜〜〜〜〜（切実）
