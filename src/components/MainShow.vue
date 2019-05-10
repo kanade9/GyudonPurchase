@@ -92,11 +92,13 @@
 
             </v-layout>
         </v-container>
+        <app-carousels></app-carousels>
     </div>
 </template>
 
 <script>
     import AppMenuButton from "@/components/AppMenuButton";
+    import AppCarousels from "@/components/AppCarousels";
 
     const ev = [110, 111, 200, 210, 212, 300, 310, 401, 402];
     const acception = [false, false, true, false, true, true];
@@ -120,7 +122,7 @@
 
     export default {
         name: "ShowCase",
-        components: {AppMenuButton},
+        components: {AppCarousels, AppMenuButton},
         data: function () {
             return {
                 total_value: 0,
