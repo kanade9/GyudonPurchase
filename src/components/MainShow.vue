@@ -89,10 +89,12 @@
                         <!--{{ i.N }} {{ i.S }} {{ i.O }} {{ i.A }}-->
                     </div>
                 </v-flex>
+                <v-flex xs12 sm6>
+                    <app-carousels></app-carousels>
+                </v-flex>
 
             </v-layout>
         </v-container>
-        <app-carousels></app-carousels>
     </div>
 </template>
 

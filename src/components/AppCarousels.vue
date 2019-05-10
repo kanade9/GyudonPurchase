@@ -1,10 +1,8 @@
 <template>
-    <!--<v-card class="pa-3">-->
-        <!--<v-carousel>-->
-            <!--<v-carousel-item v-for="(carousel,i) in carousels" v-bind:src="carousel.src" :key="i"></v-carousel-item>-->
-        <!--</v-carousel>-->
-    <!--</v-card>-->
-    <img src="https://github.com/kzmaro/GyudonPurchase/blob/pic/menu.png" alt="" width="" height="" border="0" />
+    <v-carousel height="400px">
+        <v-carousel-item style="width:100%;height:400px" v-for="(carousel,i) in carousels" v-bind:src="carousel.src"
+                         :key="i"></v-carousel-item>
+    </v-carousel>
 </template>
 
 <script>
@@ -13,8 +11,8 @@
         data: function () {
             return {
                 carousels: [
-                    {src: 'https://github.com/kzmaro/GyudonPurchase/blob/pic/menu.png'},
-                    {src: 'https://github.com/kzmaro/GyudonPurchase/blob/pic/careful.png'},
+                    {src: 'https://user-images.githubusercontent.com/47267817/57549129-b083d400-739d-11e9-9f7c-1f9f7016ba43.png'},
+                    {src: 'https://user-images.githubusercontent.com/47267817/57548936-2f2c4180-739d-11e9-8f4d-ce1363c707a6.png'},
 
                 ]
             }
