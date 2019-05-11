@@ -1,8 +1,10 @@
 <template>
-    <v-carousel height="400px">
-        <v-carousel-item style="width:100%;height:400px" v-for="(carousel,i) in carousels" v-bind:src="carousel.src"
+    <v-card>
+    <v-carousel height="400px" >
+        <v-carousel-item style="width:460px;height:400px" v-for="(carousel,i) in carousels" v-bind:src="carousel.src"
                          :key="i"></v-carousel-item>
     </v-carousel>
+    </v-card>
 </template>
 
 <script>

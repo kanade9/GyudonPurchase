@@ -73,7 +73,7 @@
         <v-container grid-list-md text-xs-center>
             <v-layout row reverse wrap>
                 <!--<v-layout justify-center>-->
-                <v-flex xs6 sm3>
+                <v-flex xs6 sm2>
                     <p>
                         <v-btn color="success" v-on:click="judge()">値段を計算する</v-btn>
                     </p>
@@ -89,7 +89,7 @@
                         <!--{{ i.N }} {{ i.S }} {{ i.O }} {{ i.A }}-->
                     </div>
                 </v-flex>
-                <v-flex xs12 sm6>
+                <v-flex xs12 sm7>
                     <app-carousels></app-carousels>
                 </v-flex>
 
