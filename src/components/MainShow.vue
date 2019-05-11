@@ -6,7 +6,8 @@
         <!--<h4>This page will be a top page</h4>-->
         <!--<br>-->
         <v-container grid-list-md text-xs-center>
-            <v-layout justify-center>
+            <!--<v-layout justify-center>-->
+            <v-layout row wrap>
                 <v-flex xs3>
                     <h3>メインメニュー</h3>
                     <p>

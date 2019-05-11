@@ -1,11 +1,12 @@
 <template>
     <!--<v-container>-->
     <v-layout justify-center>
-        <v-card>
+        <v-card class="pa-0 ma-0">
             <v-card-actions>
-                <v-btn flat color="orange" type="button" v-on:click='tell()'>
-                    <span style=" color: #333399; ">{{menu}}</span>
-                    <span style=" color: brown">{{A}}円</span>
+                <v-btn flat color="red" type="button" v-on:click='tell()'>
+                    <!--<span style=" color: #333399; ">{{menu}}</span>-->
+                    <!--<span style=" color: brown">{{A}}円</span>-->
+                    <p id="tag">{{menu}}<br>{{A}}円<br></p>
                 </v-btn>
             </v-card-actions>
         </v-card>
@@ -29,5 +30,9 @@
 </script>
 
 <style scoped>
-
+    #tag {
+        color: darkblue;
+        font-weight: bold;
+        font-size: 120%;
+    }
 </style>
