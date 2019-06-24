@@ -171,7 +171,7 @@
 
                     // alert(status);
                     if (status === -1) {
-                        alert('error! please retry');
+                        alert('Error! 下の注意事項にも目を通してください！');
                         location.reload();
                     }
                 }
