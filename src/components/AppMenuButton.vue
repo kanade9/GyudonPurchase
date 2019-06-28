@@ -33,6 +33,6 @@
     #tag {
         color: darkblue;
         font-weight: bold;
-        font-size: 120%;
+        font-size: 100%;
     }
 </style>

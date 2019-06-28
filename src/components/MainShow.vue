@@ -8,7 +8,7 @@
         <v-container grid-list-md text-xs-center>
             <!--<v-layout justify-center>-->
             <v-layout row wrap>
-                <v-flex xs3>
+                <v-flex xs6 sm3>
                     <h3>メインメニュー</h3>
                     <p>
                         <app-menu-button menu="牛丼" N=1 S=1 O=1 A=380 @tellValue="addList"></app-menu-button>
@@ -20,7 +20,7 @@
                         <app-menu-button menu="鮭定食" N=1 S=1 O=0 A=450 @tellValue="addList"></app-menu-button>
                     </p>
                 </v-flex>
-                <v-flex xs3>
+                <v-flex xs6 sm3>
                     <h3>サイドメニュー1</h3>
                     <p>
                         <app-menu-button menu="野菜サラダ" N=2 S=1 O=2 A=100 @tellValue="addList"></app-menu-button>
@@ -38,7 +38,7 @@
                         <app-menu-button menu="温泉卵" N=2 S=0 O=0 A=70 @tellValue="addList"></app-menu-button>
                     </p>
                 </v-flex>
-                <v-flex xs3>
+                <v-flex xs6 sm3>
                     <h3>サイドメニュー2</h3>
                     <p>
                         <app-menu-button menu="みそ汁" N=3 S=1 O=0 A=60 @tellValue="addList"></app-menu-button>
@@ -50,7 +50,7 @@
                         <app-menu-button menu="スープ" N=3 S=1 O=0 A=200 @tellValue="addList"></app-menu-button>
                     </p>
                 </v-flex>
-                <v-flex xs3>
+                <v-flex xs6 sm3>
                     <h3>オプション</h3>
                     <p>
                         <app-menu-button menu="並" N=4 S=0 O=1 A=0 @tellValue="addList"></app-menu-button>
